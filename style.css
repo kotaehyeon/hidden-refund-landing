@@ -1,0 +1,257 @@
+/* Fonts */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+/* Design Tokens */
+:root {
+  --color-primary: #006BF3;
+  --color-accent: #FFEB3B;
+  --color-danger: #FF3B30;
+  --color-bg: #f8f9fa;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-text-muted: #666666;
+  --radius-card: 8px;
+  --radius-badge: 20px;
+  --max-width: 480px;
+  --font-base: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-black);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout wrapper */
+.page-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--color-white);
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.header {
+  background: var(--color-primary);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__logo {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.header__menu-btn {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Nav */
+.nav {
+  background: var(--color-primary);
+  display: none;
+  flex-direction: column;
+  padding: 0 16px 12px;
+}
+
+.nav.is-open {
+  display: flex;
+}
+
+.nav__item {
+  color: rgba(255,255,255,0.85);
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav__item:last-child {
+  border-bottom: none;
+}
+
+/* Hero */
+.hero {
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 36px 24px 40px;
+}
+
+.hero__badge {
+  display: inline-block;
+  background: var(--color-danger);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-badge);
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero__sub {
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero__cta {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 28px;
+  border-radius: var(--radius-card);
+}
+
+/* Sections */
+.section {
+  padding: 20px 16px;
+}
+
+.section--gray {
+  background: var(--color-bg);
+}
+
+.section--white {
+  background: var(--color-white);
+}
+
+.section__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background: var(--color-white);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-card);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: box-shadow 0.15s;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0,107,243,0.15);
+}
+
+.card__icon {
+  font-size: 22px;
+}
+
+.card__name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+}
+
+.card__link {
+  font-size: 11px;
+  color: var(--color-primary);
+}
+
+/* Target Audience */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.audience-btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  transition: opacity 0.15s;
+}
+
+.audience-btn:hover {
+  opacity: 0.85;
+}
+
+/* Stats Highlight Box */
+.stats-box {
+  margin: 0 16px 16px;
+  background: var(--color-accent);
+  border-radius: var(--radius-card);
+  padding: 18px 16px;
+}
+
+.stats-box__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.stats-box__amount {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.stats-box__sub {
+  font-size: 12px;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background: var(--color-primary);
+  color: rgba(255,255,255,0.85);
+  padding: 20px 16px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.footer p + p {
+  margin-top: 4px;
+}
