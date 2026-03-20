@@ -216,6 +216,42 @@ a {
   opacity: 0.85;
 }
 
+/* Full-width Button List */
+.btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: opacity 0.15s;
+}
+
+.btn-list__item:hover {
+  opacity: 0.88;
+}
+
+.btn-list__arrow {
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
 /* Stats Highlight Box */
 .stats-box {
   margin: 0 16px 16px;
