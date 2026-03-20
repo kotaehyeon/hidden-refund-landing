@@ -319,6 +319,36 @@ a {
   line-height: 1.7;
 }
 
+/* Article Section */
+.article-section {
+  background: var(--color-white);
+  padding: 8px 0;
+}
+
+.article-item {
+  padding: 16px 16px 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.article-item__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.article-item__body {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.article-item__body strong {
+  color: #111;
+  font-weight: 700;
+}
+
 /* Content Pages */
 .content-header {
   background: var(--color-primary);
