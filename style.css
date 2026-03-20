@@ -279,6 +279,46 @@ a {
   color: #333;
 }
 
+/* Info Box */
+.info-box {
+  background: var(--color-white);
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid var(--color-primary);
+  margin: 0 16px 12px;
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  padding: 14px 14px 14px 16px;
+}
+
+.info-box--blue {
+  border-left-color: #00A8FF;
+  background: #f0f8ff;
+}
+
+.info-box__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.info-box__tag {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+}
+
+.info-box__amount {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.info-box__text {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.7;
+}
+
 /* Content Pages */
 .content-header {
   background: var(--color-primary);
